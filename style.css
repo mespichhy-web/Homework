@@ -1,0 +1,171 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #3d5368;
+  background: #f4f6fa;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 18px;
+  display: grid;
+  place-items: center;
+}
+
+.browser-window {
+  width: min(100%, 760px);
+  overflow: hidden;
+  border: 2px solid #e0e5ec;
+  border-radius: 13px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgb(36 55 80 / 8%);
+}
+
+.browser-bar {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0 13px;
+  background: #e9edf4;
+  border-bottom: 1px solid #dce2eb;
+}
+
+.dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+}
+
+.red { background: #ef6258; }
+.yellow { background: #f4bd4f; }
+.green { background: #45bd79; }
+
+.filename {
+  margin: 0 auto;
+  padding-right: 42px;
+  color: #607187;
+  font-family: monospace;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.page-layout {
+  display: grid;
+  gap: 8px;
+  padding: 14px 17px 15px;
+}
+
+.site-header,
+.site-nav,
+.main-content,
+.article-content,
+.section-content,
+.sidebar,
+.site-footer {
+  border: 2px solid;
+  border-radius: 11px;
+  font-family: monospace;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.site-header,
+.site-nav,
+.site-footer {
+  min-height: 55px;
+  display: grid;
+  place-items: center;
+}
+
+.site-header {
+  color: #7440c2;
+  border-color: #a65af0;
+  background: #eee3ff;
+}
+
+.site-nav {
+  color: #3978b4;
+  border-color: #56a5e8;
+  background: #e2f1fc;
+}
+
+.content-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 7px;
+  min-height: 265px;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 0;
+  padding: 9px;
+  color: #348f7c;
+  border-color: #54b99f;
+  background: #e6f5f0;
+}
+
+.article-content,
+.section-content {
+  flex: 1;
+  min-height: 95px;
+  padding: 10px;
+}
+
+.article-content {
+  color: #d45b35;
+  border-color: #ed6847;
+  background: #f3e7e1;
+}
+
+.section-content {
+  color: #7044bd;
+  border-color: #9860e6;
+  background: #e8e9fb;
+}
+
+.sidebar {
+  padding: 10px;
+  color: #376e9d;
+  border-color: #4a91c2;
+  background: #e1eef7;
+}
+
+.site-footer {
+  color: #347f73;
+  border-color: #4da995;
+  background: #e2f1ee;
+}
+
+@media (max-width: 520px) {
+  body {
+    padding: 8px;
+  }
+
+  .page-layout {
+    padding: 10px;
+  }
+
+  .content-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .main-content {
+    min-height: 250px;
+  }
+
+  .sidebar {
+    min-height: 110px;
+  }
+
+  .filename {
+    font-size: 12px;
+  }
+}
